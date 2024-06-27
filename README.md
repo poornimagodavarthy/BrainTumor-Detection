@@ -36,3 +36,30 @@ To access the dataset used in this project, click the link below:
 6. **Open the Notebook:**
    - Open your notebook file within Colab by clicking `File` > `Open notebook` > `GitHub` and then search for your repository and select your notebook file.
 
+
+## Running on Local Machine
+
+
+### Instructions:
+
+1. **Clone the Repository:**
+   - Open a terminal and run the following command to clone the repository:
+     ```bash
+     git clone https://github.com/poornimagodavarthy/BrainTumor-Detection.git
+     ```
+
+2. **Navigate to the Cloned Directory:**
+   - Change to the project directory:
+     ```bash
+     cd BrainTumor-Detection
+     ```
+
+3. **Install Dependencies:**
+   - Install the required dependencies using pip:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+   This command will install all the necessary packages listed in the `requirements.txt` file.
+
+
