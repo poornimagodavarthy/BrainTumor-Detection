@@ -10,8 +10,6 @@ This project aims to classify tumor types from the BraTs Dataset utilizing a cus
 </div>
 
 
-
-
 ## Choose how to run
 1. [On Google Colab](#running-the-notebook-on-google-colab)
 2. [On Local Machine](#running-on-local-machine)
