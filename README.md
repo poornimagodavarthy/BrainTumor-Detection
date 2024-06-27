@@ -5,6 +5,10 @@ This project aims to classify tumor types from the BraTs Dataset utilizing a cus
 By applying Grad-CAM (Gradient-weighted Class Activation Mapping), the project provides interpretable visualizations of the classification results. 
 Ongoing work includes integrating Large Language Models (LLMs) to enhance explainability and improve model accuracy.
 
+# Choose how you want to run
+1. [on Google Colab](#running-the-notebook-on-google-colab)
+2. [On Local Machine](#running-on-local-machine)
+   
 ## Dataset
 To access the dataset used in this project, click the link below:
 
