@@ -27,7 +27,7 @@ To access the dataset used in this project, click the link below:
 4. **Clone the GitHub Repository in Colab:**
    - In the first code cell of your new notebook, enter the following command to clone your repository:
      ```python
-     !git clone https://github.com/yourusername/brain-tumor-detection.git
+     !git clone [https://github.com/yourusername/brain-tumor-detection.git](https://github.com/poornimagodavarthy/BrainTumor-Detection.git)
      ```
    - Run the cell by pressing `Shift + Enter`.
 
