@@ -26,15 +26,15 @@ To access the dataset used in this project, click the link below:
 
 3. **Navigate to the Notebook File:**
    
-5. ** Preprocess Dataset**
+5. **Preprocess Dataset**
    - download the [dataset](## Dataset) from BraTs
    -  preprocess by running the code blocks for testing and training
   
-6. ** Getting the Model **
+6. **Getting the Model**
    - Import the model to your Google Drive
    - Mount your drive by running the code block
      
-7. ** To view Grad-Cam **
+7. **To view Grad-Cam**
    - load the model path and run code block for grad-cam integration
 
 ## Running on Local Machine
