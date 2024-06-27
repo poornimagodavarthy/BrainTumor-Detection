@@ -1,13 +1,14 @@
 # Brain Tumor Detection with XAI and Deep Learning
+*Research by Poornima Godavarthy*
 
 ## Description
-This project aims to classify tumor types from the BraTs Dataset utilizing a custom transfer learning approach based on the lightweight MobileNetV2 model. 
-By applying Grad-CAM (Gradient-weighted Class Activation Mapping), the project provides interpretable visualizations of the classification results. 
-Ongoing work includes integrating Large Language Models (LLMs) to enhance explainability and improve model accuracy.
+This project aims to classify tumor types from the BraTs Dataset utilizing a custom transfer learning approach based on the lightweight MobileNetV2 model. By applying Grad-CAM (Gradient-weighted Class Activation Mapping), the project provides interpretable visualizations of the classification results. Ongoing work includes integrating Large Language Models (LLMs) to enhance explainability and improve model accuracy.
+
 <div style="text-align: center;">
-    <img width="293" alt="image" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/664bc1b2-021f-4826-9f54-5bb977bbe858">
-    <img width="273" alt="image" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/b4649318-06e3-475c-9a1e-29561ea3566f">
+    <img width="293" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/664bc1b2-021f-4826-9f54-5bb977bbe858">
+    <img width="273" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/b4649318-06e3-475c-9a1e-29561ea3566f">
 </div>
+
 
 
 
