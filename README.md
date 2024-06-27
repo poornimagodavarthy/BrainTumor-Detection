@@ -19,27 +19,12 @@ To access the dataset used in this project, click the link below:
 ### Instructions:
 
 1. **Open Google Colab:**
-   - Go to [Google Colab](https://colab.research.google.com/).
+   - Navigate to [Colab File]([https://colab.research.google.com/](https://colab.research.google.com/github/poornimagodavarthy/BrainTumor-Detection/blob/main/Brain_Tumor_Detection_with_XAI_and_Deep_Learning.ipynb)).
 
 2. **Create a New Notebook:**
-   - Click on `File` > `New notebook`.
+   - Click on `File` > `Save a copy in Drive`.
 
-3. **Clone the GitHub Repository in Colab:**
-   - In the first code cell of your new notebook, enter the following command to clone your repository:
-     ```python
-     !git clone https://github.com/poornimagodavarthy/BrainTumor-Detection.git
-     ```
-   - Run the cell by pressing `Shift + Enter`.
-
-5. **Navigate to the Notebook File:**
-   - After cloning the repository, navigate to your notebook file. For example:
-     ```python
-     %cd BrainTumor-Detection
-     ```
-
-6. **Open the Notebook:**
-   - Open your notebook file within Colab by clicking `File` > `Open notebook` > `GitHub` and then search for your repository and select your notebook file.
-
+2. **Navigate to the Notebook File:**
 
 ## Running on Local Machine
 
