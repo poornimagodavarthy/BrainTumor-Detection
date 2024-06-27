@@ -30,7 +30,7 @@ To access the dataset used in this project, click the link below:
 5. **Navigate to the Notebook File:**
    - After cloning the repository, navigate to your notebook file. For example:
      ```python
-     %cd brain-tumor-detection
+     %cd BrainTumor-Detection
      ```
 
 6. **Open the Notebook:**
