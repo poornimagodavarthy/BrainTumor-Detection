@@ -19,7 +19,7 @@ To access the dataset used in this project, click the link below:
 ### Instructions:
 
 1. **Open Google Colab:**
-   - Navigate to [Colab File](https://colab.research.google.com/github/poornimagodavarthy/BrainTumor-Detection/blob/main/Brain_Tumor_Detection_with_XAI_and_Deep_Learning.ipynb)
+   - Navigate to [Colab File](https://colab.research.google.com/drive/1bM4zTYlEN_mPA8C5Z6a2jfTv1dNsMduy#scrollTo=CUKvWrHOJAng)
 
 2. **Create a New Notebook:**
    - Click on `File` > `Save a copy in Drive`.
