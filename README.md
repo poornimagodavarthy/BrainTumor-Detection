@@ -6,7 +6,10 @@ By applying Grad-CAM (Gradient-weighted Class Activation Mapping), the project p
 Ongoing work includes integrating Large Language Models (LLMs) to enhance explainability and improve model accuracy.
 
 ## Dataset
-[Brain Tumor Data](https://data.mendeley.com/datasets/w4sw3s9f59/1)
+To access the dataset used in this project, click the link below:
+
+### [**Brain Tumor Data**](https://data.mendeley.com/datasets/w4sw3s9f59/1)
+
 ## Running the Notebook on Google Colab
 
 ### Instructions:
