@@ -31,7 +31,7 @@ To access the dataset used in this project, click the link below:
    - Preprocess by running the code blocks for testing and training.
   
 6. **Getting the Model**
-   - Import the model to your Google Drive
+   - Download and import the [model](https://drive.google.com/file/d/1Gn3KVwo0jEgyY6F3_-I3UfeCo-2gyJzZ/view?usp=drive_link) to your Google Drive
    - Mount your drive by running the code block
      
 7. **To view Grad-Cam**
