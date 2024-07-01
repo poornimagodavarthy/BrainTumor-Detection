@@ -32,17 +32,17 @@ To access the dataset used in this project, click the link below:
 2. **Create a New Notebook:**
    - Click on `File` > `Save a copy in Drive`.
 
-3. **Navigate to the Notebook File:**
+3. **Navigate to the Notebook File**
    
-5. **Preprocess Dataset**
+4. **Preprocess Dataset**
    - Download the [dataset](https://data.mendeley.com/datasets/w4sw3s9f59/1) from BraTs.
    - Preprocess by running the code blocks for testing and training.
   
-6. **Getting the Model**
+5. **Getting the Model**
    - Download and import the [model](https://drive.google.com/file/d/1-6OOWPtLyGKetNob07Fd_0zXMNjWyXEu/view?usp=sharing) to your Google Drive
    - Mount your drive by running the code block
      
-7. **To view Grad-Cam**
+6. **To view Grad-Cam**
    - load the model path and run code block for grad-cam integration
 
 ## Running on Local Machine
