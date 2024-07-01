@@ -1,4 +1,4 @@
-# Brain Tumor Classification Using XAI, Deep Learning, and LLM Integration
+# Brain Tumor Classification Using XAI, Deep Learning, and LLMs
 *Research and implementation by Poornima Godavarthy*
 
 ## Description
