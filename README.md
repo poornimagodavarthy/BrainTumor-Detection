@@ -36,14 +36,15 @@ To access the dataset used in this project, click the link below:
    - Preprocess by running the code blocks for testing and training.
   
 6. **Getting the Model**
-   - Download and import the [model](https://drive.google.com/file/d/1Gn3KVwo0jEgyY6F3_-I3UfeCo-2gyJzZ/view?usp=drive_link) to your Google Drive
+   - Download and import the [model](https://drive.google.com/file/d/1-6OOWPtLyGKetNob07Fd_0zXMNjWyXEu/view?usp=sharing) to your Google Drive
    - Mount your drive by running the code block
      
 7. **To view Grad-Cam**
    - load the model path and run code block for grad-cam integration
 
 ## Running on Local Machine
-
+Prerequisites:
+Python 3.x installed on your machine
 
 ### Instructions:
 
@@ -59,12 +60,35 @@ To access the dataset used in this project, click the link below:
      cd BrainTumor-Detection
      ```
 
-3. **Install Dependencies:**
+3. **Setup Virtual Environment (Optional but Recommended):**
+   On macOS/Linux:
+```bash
+python3 -m venv myenv
+source myenv/bin/activate
+```
+On Windows:
+```bash
+python -m venv myenv
+.\myenv\Scripts\activate
+```
+
+5. **Install Dependencies:**
    - Install the required dependencies using pip:
      ```bash
      pip install -r requirements.txt
      ```
-
    This command will install all the necessary packages listed in the `requirements.txt` file.
+   
+6. **Prepare Data (if applicable):**
+   - If your project involves specific datasets or preprocessing steps (noted in preprocess.py), ensure they are set up correctly. Modify data paths or configurations as needed.
+7. **Train the Model (if applicable):**
+   - If training is required or you wish to customize model parameters, modify and run train.py
+  
+8. **Evaluate the Model (if applicable):**
+   - run evaluate.py to evaluate the trained model on test data
+  
+9. **Run Grad-CAM and GPT-2 Integration:**
+    - Execute the GradCam_GPT.py script to integrate Grad-CAM visualization with GPT-2 text generation.
+    - Since GPT-2 integration is still under development, it is recommended to comment that part to avoid unexpected responses.
 
 
