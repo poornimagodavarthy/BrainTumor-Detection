@@ -2,9 +2,9 @@
 *Research and implementation by Poornima Godavarthy*
 
 ## Description
-This project aims to classify tumor types from the BraTs Dataset utilizing a custom transfer learning approach based on the lightweight MobileNetV2 model. By applying Grad-CAM (Gradient-weighted Class Activation Mapping), the project provides interpretable visualizations of the classification results. Ongoing work includes integrating Large Language Models (LLMs) to enhance explainability and improve model accuracy and F1 score.
+This project focuses on classifying brain tumor types from the BraTs Dataset using a custom transfer learning approach based on the lightweight MobileNetV2 model. By incorporating Grad-CAM (Gradient-weighted Class Activation Mapping), the project offers interpretable visualizations of the classification results. Ongoing development efforts include the integration of Large Language Models (LLMs) to enhance explainability and further improve model accuracy and the F1 score.
 
-The current model achieves an accuracy of 85% and an F1 score of 85% on the test set, demonstrating its effectiveness in classifying brain tumor types.
+The current model demonstrates an accuracy of 85% and an F1 score of 85% on the test set, underscoring its effectiveness in accurately classifying brain tumor types.
 
 
 <div style="text-align: center;">
