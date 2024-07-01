@@ -27,7 +27,7 @@ To access the dataset used in this project, click the link below:
 ### Instructions:
 
 1. **Open Google Colab:**
-   - Navigate to [Colab File](https://colab.research.google.com/drive/1bM4zTYlEN_mPA8C5Z6a2jfTv1dNsMduy#scrollTo=CUKvWrHOJAng)
+   - Navigate to [Colab File](https://colab.research.google.com/drive/1HYTJhRXZDrIozmVjj1ELM6LJLvCJDtJJ?usp=drive_link)
 
 2. **Create a New Notebook:**
    - Click on `File` > `Save a copy in Drive`.
