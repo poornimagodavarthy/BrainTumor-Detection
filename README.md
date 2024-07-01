@@ -8,9 +8,9 @@ The current model demonstrates an accuracy of 85% and an F1 score of 85% on the 
 
 
 <div style="text-align: center;">
-    <img width="293" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/887182c5-ec65-46b6-acf1-7807d3d124a7">
-    <img width="293" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/664bc1b2-021f-4826-9f54-5bb977bbe858">
-    <img width="273" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/b4649318-06e3-475c-9a1e-29561ea3566f">
+    <img width="300" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/664bc1b2-021f-4826-9f54-5bb977bbe858">
+    <img width="300" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/887182c5-ec65-46b6-acf1-7807d3d124a7">
+    <img width="300" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/b4649318-06e3-475c-9a1e-29561ea3566f">
 </div>
 
 
