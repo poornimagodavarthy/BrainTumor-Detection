@@ -108,8 +108,3 @@ bash
 <div style="text-align: center;">
     <img width="1241" alt="image" src="https://github.com/user-attachments/assets/298f284a-ca61-4e12-8849-9f7996026269">
 </div>
-
----
-
-## Example Results
-![Example Result](https://github.com/user-attachments/assets/298f284a-ca61-4e12-8849-9f7996026269)
