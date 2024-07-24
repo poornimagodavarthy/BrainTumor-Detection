@@ -8,8 +8,10 @@ The current model demonstrates an accuracy of 85% and an F1 score of 85% on the 
 
 
 
-<img width="1241" alt="image" src="https://github.com/user-attachments/assets/298f284a-ca61-4e12-8849-9f7996026269">
-
+<div style="text-align: center;">
+    <img width="350" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/664bc1b2-021f-4826-9f54-5bb977bbe858">
+    <img width="350" alt="MRI Scan" src="https://github.com/poornimagodavarthy/BrainTumor-Detection/assets/71750194/887182c5-ec65-46b6-acf1-7807d3d124a7">
+</div>
 
 
 ## Choose how to run
@@ -42,7 +44,9 @@ To access the dataset used in this project, click the link below:
    - Mount your drive by running the code block
      
 6. **To view Grad-Cam**
-   - load the model path and run code block for grad-cam integration
+   - Load the model path and run code block for grad-cam integration
+7. **Running GPT-2**
+   - Please be sure to obtain a secret access key from Hugging Face Transformers and include in your notebook to access GPT-2
 
 ## Running on Local Machine
 Prerequisites:
@@ -92,4 +96,7 @@ Python 3.x installed on your machine
 
 8. **Run Grad-CAM and GPT-2 Integration:**
    - Execute the GradCam_GPT.py script to integrate Grad-CAM visualization with GPT-2 text generation.
-   - Since GPT-2 integration is still under development, it is recommended to comment out that part to avoid unexpected responses.
+
+**Results:**
+<img width="1241" alt="image" src="https://github.com/user-attachments/assets/298f284a-ca61-4e12-8849-9f7996026269">
+
