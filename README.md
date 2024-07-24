@@ -96,6 +96,9 @@ Python 3.x installed on your machine
 8. **Run Grad-CAM and GPT-2 Integration:**
    - Execute the GradCam_GPT.py script to integrate Grad-CAM visualization with GPT-2 text generation.
 
+___
+
+
 **Example Results:**
 
 
