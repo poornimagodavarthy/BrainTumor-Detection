@@ -99,7 +99,7 @@ Python 3.x installed on your machine
 ___
 
 
-*Example Results:*
+## Example Results:
 
 
 <img width="1241" alt="image" src="https://github.com/user-attachments/assets/298f284a-ca61-4e12-8849-9f7996026269">
