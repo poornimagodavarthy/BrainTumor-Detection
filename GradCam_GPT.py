@@ -7,6 +7,7 @@ from keras.models import load_model, Model
 from keras.layers import Conv2D
 import tensorflow as tf
 import matplotlib
+import warnings
 import transformers
 from transformers import GPT2Model, GPT2Config, GPT2Tokenizer, GPT2LMHeadModel, tokenizer
 
@@ -68,15 +69,15 @@ def display_gradcam(img_path, heatmap, cam_path="cam.jpg", alpha=0.4):
   plt.show()
 
 
-# GPT-2 Text Generation (in progress)
-# comment this code to view just the grad cam integration
-
+# GPT-2 Text Generation 
+  
 # Initialize tokenizer and model
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 model = GPT2LMHeadModel.from_pretrained("gpt2")
 
 if tokenizer.pad_token_id is None:
     tokenizer.pad_token_id = tokenizer.eos_token_id
+
 tumor_types = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
 
@@ -84,30 +85,70 @@ def generate_text(pred_index):
     # Get predicted tumor
     tumor_identified = tumor_types[pred_index].capitalize()
     base_prompt = {
-        "Meningioma": ("A Meningioma brain tumor has been identified. \n "
-                       "Meningiomas are typically benign and slow-growing tumors that originate from the meninges, \n "
-                       "the protective layers surrounding the brain and spinal cord. They may cause symptoms by pressing \n "
-                       "on the brain or spinal cord, leading to headaches, seizures, or neurological deficits. Treatment \n "
-                       "often involves surgical removal, and the prognosis is generally favorable. \n "),
-        "Glioma": ("A Glioma brain tumor has been identified. Gliomas are a type of tumor that arises from glial cells in the brain. \n"
-                   "They can be benign or malignant and are categorized into different grades based on their aggressiveness. \n "
-                   "Symptoms can include headaches, seizures, and neurological impairments. Treatment typically involves surgery, \n "
-                   "radiation therapy, and chemotherapy."),
-        "Pituitary": ("A Pituitary tumor has been identified. Pituitary tumors are abnormal growths that develop in the pituitary gland, \n "
-                      "which is located at the base of the brain. These tumors can affect hormone production, leading to various endocrine disorders. \n "
-                      "Symptoms may include vision problems, headaches, and hormonal imbalances. Treatment options include medication, surgery, and radiation therapy. \n"),
-        "Notumor": ("No brain tumor has been identified. This could mean the observed abnormalities are not due to a tumor but might be due to other factors such as \n"
-                    "inflammation, infection, or benign conditions. Further medical evaluation and imaging are recommended to determine the exact cause.\n")
-    }
-    input_text = base_prompt.get(tumor_identified, "No information available for this type of tumor.")
+    "Meningioma": (
+        "A Meningioma brain tumor has been identified in the patient's brain scan. Meningiomas are typically benign and slow-growing tumors that originate from the meninges, \n"
+        "the protective layers surrounding the brain and spinal cord. "
+        "Although generally benign, they can cause symptoms by pressing on the brain or spinal cord. \n"
+        "Symptoms:\nMeningiomas may lead to headaches, seizures, vision problems, or other neurological issues due to their pressure on surrounding structures.\n\n"
+        "Treatment Options:\nSurgery: Often the primary treatment, aiming to remove the tumor while preserving neurological function.\n"
+        "Radiation Therapy: Used when surgery is not feasible or to target residual tumor cells.\n\n"
+        "Prognosis:\nThe prognosis for meningioma patients is generally favorable, especially if the tumor is completely removed. Regular follow-up is essential to monitor for recurrence.\n\n"
+        "Action Steps:\nFurther Evaluation: Additional imaging or biopsy may be required to assess the tumor's characteristics and plan treatment.\n"
+        "Treatment Planning: Work with a multidisciplinary team to develop an individualized treatment strategy based on the tumor's size, location, and the patient's overall health.\n"
+        "Patient Support: Provide resources and support for the patient, including information on treatment options and potential side effects."
+    ),
 
+    "Glioma": (
+        "A Glioma brain tumor has been identified in the patient's brain scan. Gliomas are tumors that originate from the glial cells, which support and protect neurons in the brain. \n"
+        "They can be benign or malignant and are categorized into different grades based on their aggressiveness:\n\n"
+        "Grade I: Typically slow-growing and less aggressive; treatment often involves surgical removal.\n"
+        "Grade II: More likely to spread; may require additional treatments such as radiation therapy.\n"
+        "Grade III: Malignant tumors that grow rapidly and may infiltrate surrounding brain tissue; treatment usually involves surgery, radiation, and chemotherapy.\n"
+        "Grade IV: Highly aggressive with a poor prognosis; requires aggressive treatment strategies, including surgery, radiation, chemotherapy, and possibly clinical trials for experimental therapies.\n\n"
+        "Symptoms:\nPatients with gliomas may experience persistent headaches, seizures, or neurological deficits, including changes in vision, speech, or motor functions. \n"
+        "The severity and type of symptoms often correlate with the tumor's location and grade.\n\n"
+        "Treatment Options:\nSurgery: Aims to remove as much of the tumor as possible while preserving brain function.\n"
+        "Radiation Therapy: Used to target and destroy remaining tumor cells after surgery or when surgery is not feasible.\n"
+        "Chemotherapy: Utilizes drugs to kill or inhibit tumor cells, often used in conjunction with surgery and radiation.\n\n"
+        "Prognosis:\nThe prognosis for glioma patients depends on the tumor's grade, location, and the patient’s overall health. Early detection and a comprehensive treatment plan can improve outcomes.\n\n"
+        "Action Steps:\nFurther Evaluation: Consider additional imaging or biopsy if not already performed to determine the exact grade and extent of the tumor.\n"
+        "Treatment Planning: Collaborate with a multidisciplinary team including neurosurgeons, oncologists, and radiologists to create a personalized treatment plan.\n"
+        "Patient Support: Provide support resources for the patient, including information on treatment options and potential side effects."
+    ),
+
+    "Pituitary": (
+        "A Pituitary tumor has been identified in the patient's brain scan. Pituitary tumors are abnormal growths that develop in the pituitary gland, which is located at the base of the brain. "
+        "These tumors can disrupt hormone production and lead to a range of symptoms, including vision problems, headaches, and hormonal imbalances. Pituitary tumors can be classified based on their hormonal activity and location within the gland:\n\n"
+        "Functional Pituitary Tumors: Secrete excess hormones, causing conditions such as Cushing's disease, acromegaly, or prolactinoma.\n"
+        "Non-Functional Pituitary Tumors: Do not secrete hormones but can cause symptoms by pressing on nearby structures, including the optic nerves.\n\n"
+        "Symptoms:\nCommon symptoms include visual disturbances, headaches, and hormonal imbalances such as abnormal growth, metabolism, or reproductive functions.\n\n"
+        "Treatment Options:\nSurgery: Aims to remove the tumor, often performed through a transsphenoidal approach.\n"
+        "Medication: Used to control hormone levels and manage symptoms, particularly for functional tumors.\n"
+        "Radiation Therapy: May be considered if surgery is not fully effective or if the tumor is not operable.\n\n"
+        "Prognosis:\nPrognosis varies depending on the tumor type, size, and treatment response. Many patients have favorable outcomes with appropriate management, but ongoing follow-up is important.\n\n"
+        "Action Steps:\nFurther Evaluation: Additional imaging or testing may be needed to assess the tumor's characteristics and impact on hormone levels.\n"
+        "Treatment Planning: Collaborate with endocrinologists and neurosurgeons to develop a personalized treatment plan.\n"
+        "Patient Support: Offer resources and support related to managing symptoms, understanding treatment options, and addressing any side effects."
+    ),
+
+    "No Tumor": (
+        "No brain tumor has been identified in the patient's scan. This result suggests that the observed abnormalities are not due to a tumor but may be related to other factors such as inflammation, infection, or benign conditions. "
+        "Further medical evaluation is recommended to determine the exact cause of the abnormalities. This may include additional imaging, tests, or consultations with specialists to provide a comprehensive diagnosis and appropriate care plan.\n\n"
+        "Action Steps:\nFurther Evaluation: Consider additional diagnostic tests or imaging studies to clarify the nature of the abnormalities observed.\n"
+        "Consultation: Follow up with healthcare providers to explore any symptoms or concerns and determine the next steps for diagnosis or treatment.\n"
+        "Patient Support: Provide information and support for the patient regarding potential causes of their symptoms and options for further evaluation."
+    )
+}
+    input_text = base_prompt.get(tumor_identified, "No information available for this type of tumor.")
+    input_ids = tokenizer(input_text, return_tensors="pt")['input_ids']
     inputs = tokenizer(input_text, return_tensors="pt")
+
 
     # Generate the text with attention mask
     generated_text = model.generate(
         inputs['input_ids'],
         attention_mask=inputs['attention_mask'],
-        max_length=90,
+        max_length = len(input_ids[0])+1,
         pad_token_id=tokenizer.eos_token_id
     )
 
@@ -123,8 +164,8 @@ heatmap, pred_index = make_gradcam_map(img_array, chosen_layer, base_model)
 
 print("Tumor Type:", tumor_types[pred_index].capitalize())
 display_gradcam(img_path, heatmap)
+warnings.filterwarnings("ignore", category=FutureWarning, module='huggingface_hub')
 
-
-# Generate text based on the predicted tumor type (in progress)
+# Generate context summary based on the predicted tumor type
 output_text = generate_text(pred_index)
 print(output_text)
