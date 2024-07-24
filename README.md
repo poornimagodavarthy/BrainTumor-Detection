@@ -1,5 +1,5 @@
 # Brain Tumor Classification Using XAI, Deep Learning, and LLM Integration
-*Research and implementation by Poornima Godavarthy*
+*Research and implementation by Poornima Godavarthy under guidance of Prof. Canaan*
 
 ## Description
 This project aims to classify brain tumor types from the BraTs Dataset using a custom transfer learning approach based on the lightweight MobileNetV2 model. By incorporating Grad-CAM (Gradient-weighted Class Activation Mapping) for explainability and GPT-2 for generating detailed medical contexts, the project provides a comprehensive tool for brain tumor diagnosis and interpretation.
