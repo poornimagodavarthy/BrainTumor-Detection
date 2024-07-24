@@ -105,6 +105,8 @@ bash
 ---
 
 ## Example Results:
+The image shows the Grad-CAM heatmap highlighting the model's focus areas on the MRI scan. The red border is a manual annotation marking the tumor region, allowing for a direct comparison with the heatmap. Additionally, the text accompanying the image was generated using GPT-2 to offer context and insights about the detected tumor region.
+
 <div style="text-align: center;">
     <img width="1241" alt="image" src="https://github.com/user-attachments/assets/298f284a-ca61-4e12-8849-9f7996026269">
 </div>
